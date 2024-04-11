@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar"> 
+            <h1>easypizza</h1>
+            <ul> 
+                <li><a href="#" id="menuLink">Menu</a></li>
+                <li><a href="#" id="cartLink">Cart</a></li>
+                <li><a href="#" id="checkoutLink">Checkout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="menu"></main>
+    <aside id="cart"></aside>
+    <div id="checkoutForm" style="display:none;">
+        <h2>Checkout</h2>
+        <form id="checkoutFormFields">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address"><br>
+            <label for="phone">Phone Number:</label><br>
+            <input type="text" id="phone" name="phone"><br>
+            <label for="paymentMethod">Payment Method:</label><br>
+            <select id="paymentMethod" name="paymentMethod">
+                <option value="creditCard">Credit Card</option>
+                <option value="cashOnDelivery">Cash on Delivery</option>
+            </select><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <footer class="">
+        <div class="footer-content">
+            <div class="column">
+            </div>
+            <div class="column1">
+                <h2>GET IN TOUCH</h2>
+                <p>+254 714 101666</p>
+                <p>Location: Mumias - Bungoma Rd, Bungoma, Kenya</p>
+            </div>
+            <div class="column2">
+                <h2>OPENING HOURS</h2>
+                <p>Monday 07:00-17:00</p>
+                <p>Tuesday 07:00-17:00</p>
+                <p>Wednesday 07:00-17:00</p>
+                <p>Thursday 07:00-17:00</p>
+                <p>Friday 07:00-17:00</p>
+                <p>Saturday 07:00-17:00</p>
+                <div>© 2024 easypizza Ltd. All Rights Reserved</div>
+            </div>
+            <div class="column3">
+                <h2>FOLLOW US</h2>
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Instagram</p>
+            </div>
+        </div>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

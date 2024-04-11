@@ -1,0 +1,92 @@
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    display: inline-block;
+}
+
+#header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+/* Style for the Navbar */
+#navbar {
+    background-color: #d41515;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#navbar h1 {
+    margin: 0;
+    color: whitesmoke;
+}
+
+#navbar a {
+    color: rgb(231, 217, 14);
+    text-decoration: none;
+    margin: 0 10px;
+}
+#navbar a:hover {
+    color: aquamarine;
+     }
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0 15px;
+}
+
+.column h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.column p {
+    margin: 5px 0;
+}
+
+.column div {
+    margin-top: 20px;
+    font-size: 0.9em;
+}

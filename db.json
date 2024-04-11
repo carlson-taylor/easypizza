@@ -1,0 +1,124 @@
+{
+    "pizzas": [
+        {
+            "image": "images/margherita.jpg",
+            "id": 1,
+            "name": "Margherita",
+            "price": 10
+        },
+        {
+            "image": "images/pepperoni.jpg",
+            "id": 2,
+            "name": "Pepperoni",
+            "price": 12
+        },
+        {
+            "image": "images/vegetarian.jpg",
+            "id": 3,
+            "name": "Vegetarian",
+            "price": 11
+        },
+        {
+            "image": "images/hawaiian.jpg",
+            "id": 4,
+            "name": "Hawaiian",
+            "price": 13
+        },
+        {
+            "image": "images/bbq_chicken.jpg",
+            "id": 5,
+            "name": "BBQ Chicken",
+            "price": 14
+        },
+        {
+            "image": "images/meatlovers.jpg",
+            "id": 6,
+            "name": "Meat Lovers",
+            "price": 15
+        },
+        {
+            "image": "images/seafood.jpg",
+            "id": 7,
+            "name": "Seafood",
+            "price": 16
+        },
+        {
+            "image": "images/vegan.jpg",
+            "id": 8,
+            "name": "Vegan",
+            "price": 17
+        },
+        {
+            "image": "images/mushroom.jpg",
+            "id": 9,
+            "name": "Mushroom",
+            "price": 14
+        },
+        {
+            "image": "images/sausage.jpg",
+            "id": 10,
+            "name": "Sausage",
+            "price": 13
+        },
+        {
+            "image": "images/bacon.jpg",
+            "id": 11,
+            "name": "Bacon",
+            "price": 12
+        },
+        {
+            "image": "images/onion.jpg",
+            "id": 12,
+            "name": "Onion",
+            "price": 11
+        },
+        {
+            "image": "images/garlic.jpg",
+            "id": 13,
+            "name": "Garlic",
+            "price": 10
+        },
+        {
+            "image": "images/pepper.jpg",
+            "id": 14,
+            "name": "Pepper",
+            "price": 9
+        },
+        {
+            "image": "images/olive.jpg",
+            "id": 15,
+            "name": "Olive",
+            "price": 11
+        },
+        {
+            "image": "images/pineapple.jpg",
+            "id": 16,
+            "name": "Pineapple",
+            "price": 12
+        },
+        {
+            "image": "images/tomato.jpg",
+            "id": 17,
+            "name": "Tomato",
+            "price": 10
+        },
+        {
+            "image": "images/cheese.jpg",
+            "id": 18,
+            "name": "Cheese",
+            "price": 8
+        },
+        {
+            "image": "images/pepperoni_extra.jpg",
+            "id": 19,
+            "name": "Extra Pepperoni",
+            "price": 15
+        },
+        {
+            "image": "images/mushroom_extra.jpg",
+            "id": 20,
+            "name": "Extra Mushroom",
+            "price": 14
+        }
+    ]
+}
