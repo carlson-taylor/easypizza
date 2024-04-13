@@ -1,92 +1,99 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Cart array to store items
+document.addEventListener("DOMContentLoaded", function () {
     let cart = [];
-    let data; // Global variable to hold pizza data
+    let data;
 
-    // Fetch data from db.json
-    fetch('db.json')
-        .then(response => response.json())
-        .then(jsonData => {
-            data = jsonData; // Assign the fetched data to the global variable
+    fetch("db.json")
+        .then((response) => response.json())
+        .then((jsonData) => {
+            data = jsonData;
 
-            // Generate menu cards
-            const menu = document.getElementById('menu');
-            data.pizzas.forEach(pizza => {
-                const card = document.createElement('div');
-                card.classList.add('card');
+            const menu = document.getElementById("menu");
+            data.pizzas.forEach((pizza) => {
+                const card = document.createElement("div");
+                card.classList.add("card");
                 card.innerHTML = `
                     <img src="${pizza.image}" alt="${pizza.name}">
                     <h3>${pizza.name}</h3>
                     <p>$${pizza.price}</p>
-                    <button onclick="addToCart(${JSON.stringify(pizza)})">Add to Cart</button>
+                    <button class="add-to-cart-btn" data-id="${pizza.id}">Add to Cart</button>
                 `;
                 menu.appendChild(card);
             });
+
+            const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+            addToCartButtons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+                    const pizzaId = parseInt(button.getAttribute("data-id"));
+                    addToCart(pizzaId);
+                    button.disabled = true;
+                    button.textContent = "Added to Cart";
+                });
+            });
         });
 
-    // Function to add item to cart
-    function addToCart(pizza) {
-        // Add the pizza to the cart array
-        cart.push(pizza);
-
-        // Update the cart display
-        displayCart();
-    }
-
-    // Function to remove item from cart
-    function removeFromCart(pizzaId) {
-        // Find index of item in cart array
-        const index = cart.findIndex(item => item.id === pizzaId);
-        
-        // Remove item from cart array
-        if (index !== -1) {
-            cart.splice(index, 1);
+    function addToCart(pizzaId) {
+        if (!data) {
+            console.error("Data not loaded yet");
+            return;
         }
 
-        // Update the cart display
-        displayCart();
+        const pizza = data.pizzas.find((pizza) => pizza.id === pizzaId);
+        if (pizza) {
+            console.log(pizza)
+            cart.push(pizza);
+            displayCart();
+        } else {
+            console.error("Pizza not found");
+        }
     }
 
-    // Function to display cart items
+    function removeFromCart(pizzaId) {
+        const index = cart.findIndex((item) => item.id === pizzaId);
+        if (index !== -1) {
+            cart.splice(index, 1);
+            displayCart();
+        }
+    }
+
     function displayCart() {
-        const cartContainer = document.getElementById('cart');
-        cartContainer.innerHTML = ''; // Clear previous content
-        
-        // Display each item in the cart
-        cart.forEach(item => {
-            const cartItem = document.createElement('div');
-            cartItem.classList.add('cart-item');
+        console.log("Displaying Cart",cart)
+        const cartContainer = document.getElementById("cart");
+        cartContainer.innerHTML = "";
+
+        cart.forEach((item) => {
+            const cartItem = document.createElement("div");
+            cartItem.classList.add("cart-item");
+            cartItem.classList.add("card");
             cartItem.innerHTML = `
                 <p>${item.name} - $${item.price}</p>
-                <button onclick="removeFromCart(${item.id})">Remove from Cart</button>
+                <button class="remove-from-cart" data-id="${item.id}">Remove from Cart</button>
             `;
             cartContainer.appendChild(cartItem);
+            const removeFromCartButtons = document.querySelectorAll(".remove-from-cart");
+            removeFromCartButtons.forEach((button) => {
+                button.addEventListener("click", (event) => {
+                    const pizzaId = parseInt(button.getAttribute("data-id"));
+                    removeFromCart(pizzaId);
+                    
+                });
+            });
+
         });
     }
 
-    // Checkout link functionality
-    document.getElementById('checkoutLink').addEventListener('click', () => {
-        document.getElementById('checkoutForm').style.display = 'block';
+    document.getElementById("checkoutLink").addEventListener("click", () => {
+        document.getElementById("checkoutForm").style.display = "block";
     });
 
-    // Checkout form submission
-    document.getElementById('checkoutFormFields').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Retrieve form data
+    document.getElementById("checkoutFormFields").addEventListener("submit", function (event) {
+        event.preventDefault();
         const formData = new FormData(this);
         const formDataObject = {};
         formData.forEach((value, key) => {
             formDataObject[key] = value;
         });
-        
-        // Process the form data (e.g., validate, send to server)
         console.log(formDataObject);
-
-        // Reset form fields
         this.reset();
-
-        // Optionally, hide the form after submission
-        document.getElementById('checkoutForm').style.display = 'none';
+        document.getElementById("checkoutForm").style.display = "none";
     });
 });

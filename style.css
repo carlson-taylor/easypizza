@@ -1,6 +1,6 @@
 
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid #fad680;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
@@ -15,26 +15,34 @@
 }
 /* Style for the Navbar */
 #navbar {
-    background-color: #d41515;
-    color: white;
+    background-color: #ff8c00;
+    color: rgb(255, 0, 0);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    text-align: center;
 }
-
+.body {
+    background-color: rgb(245, 179, 134);
+}
 #navbar h1 {
-    margin: 0;
-    color: whitesmoke;
+    margin: 30px;
+    color: rgb(233, 4, 4);
+    text-align: center;
+    align-items: center;
+    font-size: xx-large;
 }
 
 #navbar a {
     color: rgb(231, 217, 14);
     text-decoration: none;
     margin: 0 10px;
+    text-align: center;
 }
 #navbar a:hover {
     color: aquamarine;
+    text-align: center;
      }
 nav ul {
     list-style-type: none;
@@ -45,48 +53,29 @@ nav ul {
 nav ul li {
     display: inline;
     margin-right: 10px;
+    font-size: larger;
 }
 
 button {
     padding: 5px 10px;
     background-color: #333;
     color: white;
-    border: none;
+    border: 20%;
     cursor: pointer;
 }
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
 .column {
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-    padding: 0 15px;
-}
-
-.column h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-.column p {
-    margin: 5px 0;
-}
-
-.column div {
-    margin-top: 20px;
-    font-size: 0.9em;
-}
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    background-color: #070707;
+    color: #ffffff;;
+  }
+  .footer {
+    background-color: #070707;
+    padding: 20px 0;
+    background-color: #070707;
+  }
